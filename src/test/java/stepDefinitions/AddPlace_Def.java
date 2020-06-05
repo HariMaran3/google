@@ -13,6 +13,7 @@ import io.restassured.specification.ResponseSpecification;
 import resource.APIDirectory;
 import resource.TestDataBuild;
 import resource.Utility;
+import resource.util2;
 
 import static org.junit.Assert.*;
 
@@ -49,6 +50,9 @@ public class AddPlace_Def extends Utility{
 		
 		String place_id = getPlaceId(response);
 		request = given().spec(requestSpecification()).queryParam("place_id" , place_id);
+		
+		util2.temp();
+		
 	}
 	
 	// for delete place
