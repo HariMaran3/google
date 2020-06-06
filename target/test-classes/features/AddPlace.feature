@@ -16,15 +16,3 @@ Scenario Outline: AddPlace
 	|12.34	  |23.26	 | Karnat mess	|Chennai  |
 	
 	
-Scenario: GetPlace 
-
-	Given Add place Id
-	When posting payload in "getPlaceAPI" using "get" method
-	Then gives statusCode of 200 on successful execution
-	
-Scenario: DeletePlace 
-
-	Given Adding place Id in payload
-	When posting payload in "deletePlaceAPI" using "delete" method
-	Then gives statusCode of 200 on successful execution
-	
